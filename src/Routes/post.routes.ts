@@ -19,10 +19,3 @@ router.put('/:id', postController.updatePost)
 
 //delete a post
 router.delete('/:id', postController.deletePost)
-
-
-//Route to confirm user registration
-router.post('/confirm-registration', (req, res) => {
-    const { user } = req.body;
-    res.status(200).json({ message: `User ${user.email} registration confirmed in CRUD API` });
-});
